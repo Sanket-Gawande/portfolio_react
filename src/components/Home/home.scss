@@ -1,0 +1,12 @@
+$sky: rgb(14 ,165, 233);
+$pink: rgb(244, 114 ,182);
+$slate: rgb(100 ,116, 139);
+
+.home{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-size: 5rem;
+    color: $pink;
+}

@@ -1,0 +1,28 @@
+$sky: rgb(14, 165, 233);
+$pink: rgb(244, 114, 182);
+$slate: rgb(100, 116, 139);
+
+.section_navs {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    & a {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: block;
+      margin: 10px 0;
+      background: $slate;
+      &.active {
+        background-color: $pink;
+        border: 2px solid $slate;
+      }
+    }
+  }
+}

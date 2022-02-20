@@ -1,0 +1,49 @@
+$sky: rgb(14, 165, 233);
+$pink: rgb(244, 114, 182);
+$slate: rgb(100, 116, 139);
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  .navbar {
+    padding: 20px 50px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav_logo {
+      color: $sky;
+      font-size: 2rem;
+      padding: 0 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      .navlinks_item {
+        color: $slate;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        list-style: none;
+        transition: all 0.6;
+        &:hover {
+          color: $sky;
+        }
+        .navlinks_link {
+          text-decoration: none;
+          color: inherit;
+          &.active {
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}
