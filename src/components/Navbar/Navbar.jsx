@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { NAV_LINKS, SectionNavigation } from "./navTools";
-import { logo } from "./logo";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -12,7 +11,7 @@ const Navbar = () => {
     <nav>
       <div className="navbar">
         <div className="nav_logo">
-          <img src={logo} alt="sanket" />
+          <img src='/logo.png' alt="sanket" />
         </div>
         <div className="menu_icon" onClick={() => setToggle(true)}>
           <img src="/humberger.svg" alt="menu" />

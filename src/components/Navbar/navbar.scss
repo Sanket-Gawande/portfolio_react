@@ -1,11 +1,8 @@
-$sky: rgb(14, 165, 233);
-$pink: rgb(244, 114, 182);
-$slate: rgb(100, 116, 139);
-
 nav {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 5;
 
   .navbar {
     padding: 20px 50px;
@@ -18,7 +15,7 @@ nav {
     align-items: center;
 
     .nav_logo {
-      color: $sky;
+      color: var(--primary);
       font-size: 2rem;
       padding: 0 10px;
       font-weight: bold;
@@ -33,19 +30,20 @@ nav {
       align-items: center;
 
       .navlinks_item {
-        color: $slate;
+        color: var(--secondary);
         margin: 0 10px;
-        font-size: 1.2rem;
         list-style: none;
         transition: all 0.6;
+        font-size: large;
         &:hover {
-          color: $sky;
+          color: var(--primary);
         }
         .navlinks_link {
           text-decoration: none;
           color: inherit;
           &.active {
-            color: $sky;
+            color: var(--primary);
+            font-weight: 500;
           }
         }
       }
@@ -60,20 +58,20 @@ nav {
         white;
       height: 100vh;
       padding: 4rem 2rem;
+      backdrop-filter: blur(50px);
       display: none;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
       list-style: none;
       & .navlinks_item {
-        color: $slate;
+        color: var(--secondary);
         margin: 20px;
 
         & .navlinks_link {
           color: inherit;
           text-decoration: none;
-          font-size: 1.2rem;
-          font-weight: bold;
+          font-weight: 500;
           &.active {
-            color: $sky;
+            color: var(--primary);
           }
         }
       }
@@ -82,6 +80,7 @@ nav {
         right: 50px;
         cursor: pointer;
         top: 30px;
+        color: var(--primary);
       }
     }
     .menu_icon {

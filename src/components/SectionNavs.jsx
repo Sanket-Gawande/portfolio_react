@@ -7,9 +7,9 @@ const SectionNavs = () => {
   return (
     <div className="section_navs">
       <ul>
-        {NAV_LINKS.map((item) => {
+        {NAV_LINKS.map((item , i) => {
           return (
-            <li>
+            <li key={`list_${i}`}>
               <NavLink
                 to={`/${item.link}`}
                 onClick={() => SectionNavigation(item.yOffset)}
