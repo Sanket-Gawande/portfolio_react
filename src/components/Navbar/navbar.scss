@@ -6,6 +6,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
+
   .navbar {
     padding: 20px 50px;
     width: 100%;
@@ -22,11 +23,15 @@ nav {
       padding: 0 10px;
       font-weight: bold;
       cursor: pointer;
+      width: 180px;
+      & img {
+        width: 100%;
+      }
     }
-
     .navlinks {
       display: flex;
       align-items: center;
+
       .navlinks_item {
         color: $slate;
         margin: 0 10px;
@@ -40,9 +45,66 @@ nav {
           text-decoration: none;
           color: inherit;
           &.active {
-            color: $pink;
+            color: $sky;
           }
         }
+      }
+    }
+    .navlinks_sm {
+      position: fixed;
+      top: 0;
+      width: 80%;
+      right: 0;
+      background: url("../../../public/minimal-white.png") no-repeat center
+          center/cover,
+        white;
+      height: 100vh;
+      padding: 4rem 2rem;
+      display: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+      list-style: none;
+      & .navlinks_item {
+        color: $slate;
+        margin: 20px;
+
+        & .navlinks_link {
+          color: inherit;
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-weight: bold;
+          &.active {
+            color: $sky;
+          }
+        }
+      }
+      & .toggle-cancel {
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+        top: 30px;
+      }
+    }
+    .menu_icon {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    & .navbar {
+      & .navlinks_sm {
+        display: block;
+      }
+      padding: 15px 20px;
+      .nav_logo {
+        width: 150px;
+      }
+      & .menu_icon {
+        display: block;
+      }
+      & .navlinks {
+        display: none;
       }
     }
   }
