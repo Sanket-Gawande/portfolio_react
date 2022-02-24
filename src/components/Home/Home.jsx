@@ -27,8 +27,9 @@ const Home = () => {
     <motion.section className='image'
      initial={{y : "-100vw"}}
      animate={{y:0}}
-     transition={{duration: 1 , type:"spring" , stiffness : 50}}>
-      <img src="" alt="" />
+     transition={{duration: 1 , type:"spring" , stiffness : 50}}
+     >
+      <img src="/hero.png" alt="Sanket-Gawande" />
     </motion.section>
 
     {/* icons section  */}

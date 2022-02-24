@@ -35,7 +35,7 @@ const Navbar = () => {
           <motion.ul
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5 } }
             className="navlinks_sm"
           >
             <span className="toggle-cancel" onClick={() => setToggle(false)}>
