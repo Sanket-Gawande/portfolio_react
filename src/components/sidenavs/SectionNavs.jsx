@@ -1,7 +1,7 @@
 import React from "react";
 import "./section_navs.scss";
 import { NavLink } from "react-router-dom";
-import { NAV_LINKS , SectionNavigation } from "./Navbar/navTools";
+import { NAV_LINKS , SectionNavigation } from "../Navbar/navTools";
 const SectionNavs = () => {
  
   return (
@@ -12,7 +12,7 @@ const SectionNavs = () => {
             <li key={`list_${i}`}>
               <NavLink
                 to={`/${item.link}`}
-                onClick={() => SectionNavigation(item.yOffset)}
+                onClick={() => SectionNavigation(item.link)}
               ></NavLink>
             </li>
           );

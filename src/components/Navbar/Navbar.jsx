@@ -23,7 +23,7 @@ const Navbar = () => {
                 <NavLink
                   to={`/${item.link}`}
                   className="navlinks_link"
-                  onClick={() => SectionNavigation(item.yOffset)}
+                  onClick={() => SectionNavigation(item.link)}
                 >
                   {item.link}
                 </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
                   <NavLink
                     to={`/${item.link}`}
                     className="navlinks_link"
-                    onClick={() => SectionNavigation(item.yOffset)}
+                    onClick={() => SectionNavigation(item.link)}
                   >
                     {item.link}
                   </NavLink>
