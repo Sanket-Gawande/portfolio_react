@@ -14,12 +14,12 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about" id="About">
-      <h2 className="about_heading">
+    <div className="about wrapper" id="About">
+      <h2 className="app__main_heading">
         Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. A,{" "}
         <span>voluptatum</span>.
       </h2>
-      <p className="about_desc">
+      <p className="app__main_desc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic
         doloribus nihil ipsum nisi, error alias eligendi saepe voluptas tenetur
         odio repudiandae soluta, aspernatur iste!

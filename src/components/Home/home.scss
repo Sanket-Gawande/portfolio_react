@@ -3,9 +3,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 50px;
-  padding-top: 80px;
   color: var(--primary);
   background: url("../../../public/ball-color.png") no-repeat center
     center/cover , #F9F2F1;
@@ -23,6 +20,7 @@
       width: 240px;
       & .emoji {
         font-size: 2rem;
+        margin-top: 1rem;
         margin-right: 10px;
       }
     }
@@ -78,7 +76,7 @@
       &.img-2 {
         width: 120px;
         height: 120px;
-        margin: 2rem;
+        margin: 4rem;
       }
     }
   }
@@ -121,7 +119,7 @@
       justify-content: center;
       flex-direction: row;
       & img.img-2 {
-        margin: 20px 55px;
+        margin: 2rem 2.5rem;
       }
     }
   }

@@ -1,26 +1,8 @@
 .about {
-  min-height: 100vh;
-  background-color: #9985ae12;
-  padding: 1.5rem 0;
-  & .about_heading {
-    color: var(--dark);
-    font-size: 1.7rem;
-    margin: 0 auto;
-    width: 100%;
-    padding:0 7px;
-    text-align: center;
-    & span {
-      color: var(--secondary);
-    }
-  }
-  & .about_desc {
-    text-align: center;
-    color: var(--secondary);
-    font-size: 1.1rem;
-    width: 90%;
-    margin: 0 auto;
-  }
+  
+  background-color: rgba(131, 135, 245, 0.1);
 
+ 
   & .about_flex {
     padding: 40px;
     display: flex;
@@ -29,9 +11,9 @@
     flex-wrap: wrap;
 
     & .about_profile {
-      width: 250px;
+      width: 240px;
       border-radius: 8px;
-      margin: 20px;
+      margin: 20px 1rem;
       padding: 20px;
       height: 320px;
       
@@ -63,9 +45,10 @@
 }
 @media screen and (min-width: 900px) {
   .about {
+    padding: 15rem auto;
     & .about_heading {
       font-size: 2.5rem;
-      margin: 2.5rem auto;
+     
     }
   }
 }

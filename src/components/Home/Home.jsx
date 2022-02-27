@@ -3,7 +3,7 @@ import React from 'react'
 import './home.scss'
 const Home = () => {
   return (
-    <div className='home' id='Home'>
+    <div className='home wrapper' id='Home'>
       {/* information div */}
     <motion.div className="info"
     initial={{x : "-50vw"}}

@@ -5,12 +5,12 @@ nav {
   z-index: 5;
 
   .navbar {
-    padding: 20px 50px;
+    padding: 10px 50px;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
-    background: rgba(12 ,89 , 144 , .05);
-    backdrop-filter: blur(10px);
+    background: rgba(12 ,89 , 144 , .02);
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
