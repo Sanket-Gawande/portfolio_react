@@ -2,29 +2,26 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./about.scss";
 import { client, urlFor } from "../../connection/client";
-
+import { useHeading } from "../../Context/HeadingContext";
+import Loading from "../Loading-skeleton";
 const About = () => {
+  const data = useHeading();
+  const section = data.find((item) => item.section === "about");
+
   const [profiles, setProfiles] = useState([]);
   useEffect(async () => {
-    const query = '*[_type == "profiles"]{profile , imgUrl , description , _id}';
-    client
-      .fetch(query)
-      .then((data) => setProfiles(data))
-      .catch((err) => console.log(err));
+    const query =
+      '*[_type == "profiles"]{profile , imgUrl , description , _id}';
+     const data = await client.fetch(query)
+     setProfiles(data)
   }, []);
 
   return (
     <div className="about wrapper" id="About">
-      <h2 className="app__main_heading">
-        Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. A,{" "}
-        <span>voluptatum</span>.
-      </h2>
-      <p className="app__main_desc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic
-        doloribus nihil ipsum nisi, error alias eligendi saepe voluptas tenetur
-        odio repudiandae soluta, aspernatur iste!
-      </p>
+      <h2 className="app__main_heading">{section?.heading}</h2>
+      <p className="app__main_desc">{section?.desc} </p>
       <div className="about_flex">
+        {profiles.length < 1 && <Loading />}
         {profiles.map((obj) => {
           return (
             <motion.div

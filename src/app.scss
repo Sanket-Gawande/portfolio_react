@@ -25,20 +25,18 @@ html {
   min-height: 100vh;
 }
  .app__main_heading {
-  color: var(--dark);
+  color: var(--primary);
   font-size: 2rem;
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
   padding:1rem;
   text-align: center;
-  & span {
-    color: var(--secondary);
-  }
+ 
 }
 .app__main_desc {
   text-align: center;
-  color: var(--secondary);
+  color: #666;
   font-size: 1.1rem;
   font-weight: 500;
   width: 90%;
@@ -62,4 +60,18 @@ html {
   border-radius: .45rem;
   background: var(--secondary);
   cursor: pointer;
+}
+
+@media screen and (max-width : 768px) {
+  .app__main_heading{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.45rem;
+  }
+  .app__main_desc{
+    font-size: .95rem;
+    width: 100%;
+    padding: .75rem;
+  }
+  
 }

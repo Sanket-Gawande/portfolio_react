@@ -5,7 +5,9 @@
   justify-content: center;
   color: var(--primary);
   background: url("../../../public/ball-color.png") no-repeat center
-    center/cover , #F9F2F1;
+    center/cover , rgba(0, 128, 128 , .025);
+
+    ;
   // background-attachment:fixed;
 
   & .info {

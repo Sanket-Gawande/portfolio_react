@@ -1,6 +1,6 @@
 .about {
   
-  background-color: rgba(131, 135, 245, 0.1);
+  background-color:rgba(249, 242, 241, 0.25);
 
  
   & .about_flex {
@@ -21,7 +21,7 @@
       & .about_profile-thumbnail {
         width: 100%;
         margin: 0 auto;
-        box-shadow: 0 0 5px rgba(152, 122, 158, 0.5);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.02);
 
         display: block;
         text-align: center;

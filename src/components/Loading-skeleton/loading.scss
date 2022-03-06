@@ -1,0 +1,43 @@
+.loading__skeleton_container {
+  width: 80%;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading__skeleton_box {
+  width: 180px;
+  height: 180px;
+  background: rgb(247, 246, 246);
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,.025);
+  overflow: hidden;
+}
+.loading__skeleton_box::after {
+  position: absolute;
+  content: "";
+  top: -10%;
+  left: -200%;
+  width: 400%;
+  height: 4rem;
+  background: linear-gradient(
+    0deg,
+    rgb(247, 246, 246),
+    rgba(255, 255, 255, 0.5),
+    rgb(247, 246, 246)
+  );
+  transform: rotate(-45deg);
+  animation: shine linear 1s infinite;
+}
+@keyframes shine {
+  from {
+    top: -10%;
+  }
+  to {
+    top: 150%;
+  }
+}

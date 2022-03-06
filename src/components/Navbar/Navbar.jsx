@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { NAV_LINKS, SectionNavigation } from "./navTools";
 import { motion } from "framer-motion";
-
+import  {FaAlignRight , FaTimes } from 'react-icons/fa'
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -14,7 +14,7 @@ const Navbar = () => {
           <img src='/logo.png' alt="sanket" />
         </div>
         <div className="menu_icon" onClick={() => setToggle(true)}>
-          <img src="/humberger.svg" alt="menu" />
+          <FaAlignRight size={22} style={{color : "var(--primary)"}}/>
         </div>
         <ul className="navlinks">
           {NAV_LINKS.map((item) => {
@@ -39,7 +39,7 @@ const Navbar = () => {
             className="navlinks_sm"
           >
             <span className="toggle-cancel" onClick={() => setToggle(false)}>
-              <img src="/cancel.svg" alt="X" />
+            <FaTimes size={22} style={{color : "var(--primary)"}}/>
             </span>
 
             {NAV_LINKS.map((item) => {
