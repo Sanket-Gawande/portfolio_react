@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import { useHeading } from "../../Context/HeadingContext";
 import "./contact.scss";
 import { client } from "../../connection/client";
+import {FaTimes} from "react-icons/fa"
+import { useRef } from "react";
 const Contact = () => {
   // heading
   const data = useHeading();
+  //audio ref
+  const audioRef = useRef()
   const section = data.find((item) => item.section === "contact");
   // ui update on message send's successfully
   const [messageStatus, setMessageStatus] = useState(false);
+  const [buttonText , setButtonText] = useState("Send now");
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -18,6 +23,7 @@ const Contact = () => {
   });
   //  SUBMITTING CONTACT FORM
   const submitMessage = (e) => {
+    setButtonText("Sending...")
     e.preventDefault();
     const { first_name, last_name, contact, email, message } = formData;
     client
@@ -31,6 +37,7 @@ const Contact = () => {
       .then((response) => {
         if (response) {
           setMessageStatus(true);
+          audioRef.current.play()
           setFormData([
             {
               first_name: "",
@@ -173,8 +180,7 @@ const Contact = () => {
                   />
                 </motion.div>
                 <button className="contact__contact_form_submit">
-                  {" "}
-                  Send now{" "}
+               {buttonText}
                 </button>
               </motion.form>
             )}
@@ -192,6 +198,8 @@ const Contact = () => {
                 }}
                 className="contact__contact_form_response"
               >
+                <span className="contact_contact_form_response_remove" onClick={() => {setMessageStatus(false) ; setButtonText("Send now")}}>  <FaTimes />  </span>
+                <audio src="/paytm_payment_tune.mp3" ref={audioRef} />
                 <img src="/msg-send.gif" alt="message sended successfully !" />
                 <motion.p
                   exit={{ opacity: 0, x: -200 }}
@@ -222,7 +230,7 @@ const Contact = () => {
                   }}
                   className="contact__contact_form_message_response_text"
                 >
-                  I'he hot your message
+                  I'he got your message
                 </motion.p>
               </motion.div>
             )}
@@ -238,6 +246,7 @@ const Contact = () => {
           <img src="/icons/contact-us.svg" alt="contact-us" />
         </motion.div>
       </section>
+
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Projects = () => {
   ];
   useEffect(() => {
     const query =
-      '*[ _type == "projects"]{projectname ,_id, category , thumbnail , tags , code , preview}';
+      '*[ _type == "projects"]{projectname ,_id, category , thumbnail , tags , code ,Description, preview}';
     client.fetch(query).then((data) => {
       setProjects(data);
       setFilteredProjects(data);
@@ -115,7 +115,7 @@ const Projects = () => {
                   {item.projectname}
                 </h4>
                 <p className="project__projects_list_item_desc">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia corporis laboriosam, aut natus blanditiis tenetur.
+                 {item.Description.substr(0, 95)}...
                 </p>
               </motion.div>
             );

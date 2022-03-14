@@ -16,6 +16,7 @@
       margin: 0.5rem;
       cursor: pointer;
       transition: 0.4s;
+      box-shadow:0 2px  5px rgba(122, 79, 131, 0.095);
       &:hover {
         background-color: var(--primary);
         color: white;
@@ -23,6 +24,7 @@
     }
     & .active {
       background: var(--primary);
+      box-shadow: none;
       color: #ffffff;
     }
   }

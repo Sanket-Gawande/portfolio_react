@@ -10,5 +10,5 @@ export const NAV_LINKS = [
 export function SectionNavigation(link) {
   // window.scrollTo(0, y);
   window.location.href = `#${link}`;
-  document.title = link
+  document.title = `Sanket Gawande | ${link}`
 }
