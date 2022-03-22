@@ -16,7 +16,7 @@
       margin: 0.5rem;
       cursor: pointer;
       transition: 0.4s;
-      box-shadow:0 2px  5px rgba(122, 79, 131, 0.095);
+      box-shadow: 0 2px 5px rgba(122, 79, 131, 0.095);
       &:hover {
         background-color: var(--primary);
         color: white;
@@ -48,6 +48,7 @@
       background: rgb(255, 255, 255);
 
       position: relative;
+     
       & .project__projects_list_item_thumbnail_wrapper {
         width: 120px;
         height: 120px;
@@ -111,10 +112,11 @@
       & .project__projects_list_item_title {
         font-size: 1rem;
         color: var(--primary);
-
-        // text-align: center;
         padding: 2rem 1.1rem 1rem;
         font-weight: 500;
+        @media screen and (max-width :768px) {
+          text-align: center;
+        }
       }
       & .project__projects_list_item_desc {
         font-size: 0.8rem;
@@ -128,3 +130,15 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .projects .project__projects_list .project__projects_list_item {
+    width:170px;
+    height: 225px;
+    margin: 1rem;
+    & .project__projects_list_item_desc{
+      display: none;
+    }
+    
+  }
+} 

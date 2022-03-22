@@ -6,10 +6,9 @@ import SectionNavs from "./components/sidenavs/SectionNavs";
 import About from "./components/About/About";
 import Projects from "./components/projects/Projects";
 import { HeaderContextProvider } from "./Context/HeadingContext";
-// import Academics from "./components/Academics/Academics";
-// import Messages from "./components/Messages/Messages";
+import Footer from "./components/Footer/Footer"
 import Contact from "./components/Contact/Contact";
-// import { Route, Router, Routes } from "react-router-dom";
+
 function App() {
   return (
     <HeaderContextProvider>
@@ -22,6 +21,7 @@ function App() {
         <Skills />
         {/* <Academics /> */}
         <Contact />
+        <Footer />
       </div>
     </HeaderContextProvider>
   );

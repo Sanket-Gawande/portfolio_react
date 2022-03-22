@@ -1,0 +1,29 @@
+.footer{
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: var(--secondary);
+    margin-top: 1rem;
+    & .footer__logo_section{
+        display: flex;
+        padding: 1rem 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        & .footer__logo_section_logo{
+            width: 150px;
+            filter: brightness(100);
+        }
+        & .footer__logo_section_icons{
+
+            display: flex;
+            align-items: center;
+            & svg{
+                margin: 0 1rem;
+                color: white;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+
+    }
+}
