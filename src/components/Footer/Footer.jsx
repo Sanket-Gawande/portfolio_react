@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 import '../Navbar/navbar.scss'
 const Footer = () => {
   function scrollToTop() {
-    scrollTo(0, 0)
+    window.scrollTo(0, 0)
   }
   return (
     <div className="footer">
