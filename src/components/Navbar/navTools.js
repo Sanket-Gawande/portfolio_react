@@ -3,7 +3,6 @@ export const NAV_LINKS = [
   { link: "About" },
   { link: "Projects" },
   { link: "Skills" },
-  
   { link: "Contact" },
 ];
 

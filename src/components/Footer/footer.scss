@@ -1,29 +1,103 @@
-.footer{
-    width: 100%;
+.footer {
+  width: 100%;
+  padding: 1rem 4rem;
+  background-color: #35414d;
+  margin-top: 1rem;
+  @media screen and (max-width: 768px) {
     padding: 1rem 2rem;
-    background-color: var(--secondary);
-    margin-top: 1rem;
-    & .footer__logo_section{
-        display: flex;
-        padding: 1rem 0;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        & .footer__logo_section_logo{
-            width: 150px;
-            filter: brightness(100);
-        }
-        & .footer__logo_section_icons{
-
-            display: flex;
-            align-items: center;
-            & svg{
-                margin: 0 1rem;
-                color: white;
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-        }
-
+  }
+  & .footer__logo_section {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    & .footer__logo_section_logo {
+      width: 150px;
+      filter: brightness(100);
     }
+  }
+  .footer__logo_section_icons {
+    text-align: center;
+    margin: 2rem 0;
+
+    & svg {
+      margin: 0 1rem;
+      color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+
+  .navlinks_item {
+    color: white;
+    margin: 0 10px;
+    list-style: none;
+    transition: all 0.6;
+    font-size: 0.9rem;
+    &:hover {
+      color: var(--primary);
+    }
+    .navlinks_link {
+      text-decoration: none;
+      color: inherit;
+      &.active {
+        color: white;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.address_section {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  color: rgb(200, 200, 200);
+  div {
+    max-width: 400px;
+    margin: 0.75rem 0;
+
+  }
+
+  p {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  iframe {
+    width: 400px;
+    height: 280px;
+  }
+}
+.small_screen {
+  display: none;color: white;
+  cursor: pointer;
+}
+.copy{
+    color: rgb(203, 203, 203);
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .big_screen {
+    display: none;
+  }
+  .small_screen {
+    display: block;
+  }
+  .address_section div{
+      margin: .75rem 0;
+  }
 }

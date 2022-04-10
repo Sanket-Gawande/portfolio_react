@@ -16,7 +16,7 @@ const HEADINGS = [
   {
     heading: "Contact me here !",
     section: "contact",
-    desc: "Feel free to contact me here , I'm available on social media also",
+    desc: "Feel free to contact.",
   },
 ];
 export const HeaderContextProvider = ({ children }) => {
