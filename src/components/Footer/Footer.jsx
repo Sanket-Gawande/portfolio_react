@@ -10,6 +10,9 @@ import { BiMailSend } from 'react-icons/bi'
 import { NavLink } from 'react-router-dom'
 import '../Navbar/navbar.scss'
 const Footer = () => {
+  function scrollToTop() {
+    scrollTo(0, 0)
+  }
   return (
     <div className="footer">
       <div className="footer__logo_section">
@@ -30,7 +33,7 @@ const Footer = () => {
             )
           })}
         </ul>
-        <div className="small_screen">
+        <div className="small_screen" onClick={scrollToTop}>
           <FaArrowAltCircleUp />
         </div>
       </div>
@@ -72,7 +75,7 @@ const Footer = () => {
           <FaLinkedin />
         </a>
       </div>
-      <p className='copy'>&copy; All rights are reserved | 2022 </p>
+      <p className="copy">&copy; All rights are reserved | 2022 </p>
     </div>
   )
 }
