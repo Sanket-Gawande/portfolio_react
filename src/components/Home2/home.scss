@@ -53,6 +53,7 @@
   .info {
     padding: 1rem 2rem;
     max-width: 600px;
+    margin-top: 1.5rem;
     h2 {
       font-weight: 400;
       font-size: 2.4rem;
@@ -68,8 +69,10 @@
     p {
       margin: 1rem 0;
       color: var(--primary);
+      opacity: .8;
       font-size: 1rem;
     }
+    
     a {
       color: white;
       background: var(--primary);
@@ -91,11 +94,13 @@
     }
     img {
       order: 1;
+      width: 250px !important;
+      height: 250px !important;
     }
   }
   .info{
     h2{
-      font-size: 1.8rem !important;
+      font-size: 1.5rem !important;
       
     }
     h5{
