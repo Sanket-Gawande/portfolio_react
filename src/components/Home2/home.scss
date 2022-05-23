@@ -1,0 +1,108 @@
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  background: url('../../../public/ball-color.png') no-repeat center
+      center/cover,
+    rgba(0, 128, 128, 0.025);
+  background-position: fixed;
+  @media screen and (min-width: 900px) {
+    justify-content: space-between;
+    padding: 0 10rem;
+
+    margin: 0 auto;
+  }
+  .image {
+    display: flex;
+    align-items: center;
+    .social_icons {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+      align-items: center;
+      a {
+        display: block;
+        color: var(--primary);
+        margin: 0.5rem 0;
+        transform-origin: center;
+        transition: all 0.4s;
+        &:hover {
+          transform: rotate(270deg) scale(1.1);
+        }
+        svg {
+          width: 28px;
+
+          height: 28px;
+        }
+      }
+    }
+    img {
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 15px rgba(0, 128, 128, 0.125);
+      @media screen and (min-width: 900px) {
+        margin-left: 4rem;
+      }
+    }
+  }
+  .info {
+    padding: 1rem 2rem;
+    max-width: 600px;
+    h2 {
+      font-weight: 400;
+      font-size: 2.4rem;
+      margin: 0.5rem 0;
+      span {
+        font-weight: 600;
+      }
+    }
+    h5 {
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+    p {
+      margin: 1rem 0;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    a {
+      color: white;
+      background: var(--primary);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home section.icons img.img-2 {
+    margin: 20px;
+  }
+  .image {
+    .social_icons {
+      order: 2;
+    }
+    img {
+      order: 1;
+    }
+  }
+  .info{
+    h2{
+      font-size: 1.8rem !important;
+      
+    }
+    h5{
+      font-size: 1.2rem !important;
+    }
+    p{
+      font-size: 1rem;
+    }
+  }
+}
