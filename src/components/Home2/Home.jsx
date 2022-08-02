@@ -88,7 +88,7 @@ const Home = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, type: 'spring', stiffness: 100, delay: 1 }}
           whileInView={{ x: [100, 0], o1acity: [0, 1] }}
-          href="/files/resume.pdf"
+          href="/resume - Google Docs_compressed.pdf"
           download="sanket_gawande_resume.pdf"
           className="resume_button"
         >
