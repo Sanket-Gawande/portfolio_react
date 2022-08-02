@@ -79,9 +79,9 @@ const Home = () => {
           }}
           whileInView={{ x: [200, 0], o1acity: [0, 1] }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus
-          totam in perspiciatis veniam sint, officiis molestiae impedit quod
-          recusandae!
+         Hello , I&#8218;m Sanket Gawande , BTech student completing my UG in 2023.
+            I&#8218;m Full stack (MERN) developer ,I have created so many creative
+            projects with this tech stack , and working on more like this .
         </motion.p>
         <motion.a
           initial={{ x: 100, opacity: 0 }}
