@@ -10,13 +10,13 @@ const Skills = () => {
   const section = data.find((item) => item.section === "skill");
   const [skills, setSkills] = useState([]);
   const [ExpData, setExpData] = useState([]);
-  
+  console.log(ExpData)
   useEffect(() => {
     const skill_query = '*[ _type == "skills"]{skill , imgUrl , _id}';
     client.fetch(skill_query).then((data) => {
       setSkills(data.reverse());
       const exp_query =
-        '*[ _type == "experience" ]{exp ,_id , isCertified , certificate ,from ,  to }';
+        '*[ _type == "experience" ]{exp ,_id , isCertified , certificate ,from ,  to}';
       client
         .fetch(exp_query)
         .then((expData) => setExpData(expData))

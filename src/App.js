@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./app.scss";
-import Home from "./components/Home/Home";
 import Home2 from "./components/Home2/Home";
 import Skills from "./components/skills/Skills";
 import SectionNavs from "./components/sidenavs/SectionNavs";

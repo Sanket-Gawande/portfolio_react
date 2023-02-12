@@ -9,11 +9,14 @@ const About = () => {
   const section = data.find((item) => item.section === "about");
 
   const [profiles, setProfiles] = useState([]);
-  useEffect(async () => {
+  const getProfiles = async () => {
     const query =
       '*[_type == "profiles"]{profile , imgUrl , description , _id}';
-     const data = await client.fetch(query)
-     setProfiles(data)
+    const data = await client.fetch(query)
+    setProfiles(data)
+  }
+  useEffect(() => {
+    getProfiles();
   }, []);
 
   return (

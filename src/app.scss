@@ -2,6 +2,16 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: var(--slate);
+  background-clip: padding-box;
+  border-radius: 1rem;
+  border: 3px solid transparent;
+}
 :root {
   --primary: #35414d;
   --secondary: #002129;
@@ -10,7 +20,7 @@ html {
   --slate: #c0c2c9;
   --dark: #545353;
 }
-::selection{
+::selection {
   color: var(--dark);
   background: var(--bg);
 }
@@ -24,15 +34,14 @@ html {
   background: var(--bg);
   min-height: 100vh;
 }
- .app__main_heading {
+.app__main_heading {
   color: var(--primary);
   font-size: 2rem;
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
-  padding:1rem;
+  padding: 1rem;
   text-align: center;
- 
 }
 .app__main_desc {
   text-align: center;
@@ -40,38 +49,26 @@ html {
   font-size: 1.1rem;
   font-weight: 500;
   width: 90%;
-  max-width:800px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-.wrapper{
+.wrapper {
   min-height: 100vh;
   padding-top: 6rem;
 }
-::-webkit-scrollbar{
-  border-radius: .45rem;
-  background: var(--slate);
-  opacity: .85;
-  padding: .15rem;
-  width: .85rem;
-}
-::-webkit-scrollbar-thumb{
-  border-radius: .45rem;
-  background: var(--secondary);
-  cursor: pointer;
-}
 
-@media screen and (max-width : 768px) {
-  .app__main_heading{
+
+@media screen and (max-width: 768px) {
+  .app__main_heading {
     width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
     font-size: 1.45rem;
   }
-  .app__main_desc{
-    font-size: .95rem;
+  .app__main_desc {
+    font-size: 0.95rem;
     width: 100%;
-    padding: .75rem;
+    padding: 0.75rem;
   }
-  
 }
