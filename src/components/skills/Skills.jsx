@@ -21,7 +21,6 @@ const Skills = () => {
         .fetch(exp_query)
         .then((expData) => setExpData(expData))
         .catch((err) => {
-          alert("reload page, data fetching failed");
           console.log(err)
         });
     });
@@ -75,8 +74,7 @@ const Skills = () => {
                         <span className="skill__exp_list_item_date">
                           to : {obj.to}
                         </span>
-                       
-                        <a className="skill__exp_list_item_button" rel="noreferrer"  href={`${process.env.REACT_APP_SANITY_FILE_CDN}${obj.certificate.asset._ref.split("-")[1]}.${obj.certificate.asset._ref.split("-")[2]}`} target="_blank">
+                        <a className="skill__exp_list_item_button" rel="noreferrer"  href={`${process.env.REACT_APP_SANITY_FILE_CDN}${obj?.certificate?.asset._ref.split("-")[1]}.${obj?.certificate?.asset._ref.split("-")[2]}`} target="_blank">
                           View certificate
                         </a>
                       </>
