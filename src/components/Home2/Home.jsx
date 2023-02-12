@@ -13,7 +13,7 @@ const Home = () => {
       const zero = urlFor(featured[0]?.imgUrl)
       const one = urlFor(featured[2]?.imgUrl)
       const two = urlFor(featured[1]?.imgUrl)
-      setImages([zero, one, two])
+      setImages([zero, one, two]) 
     })
   }, [])
   return (
